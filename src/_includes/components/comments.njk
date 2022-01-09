@@ -1,0 +1,20 @@
+<h2>Kommentare</h2>
+
+{% set postComments = comments.comments | thisPostComments(id) %}
+
+<ul class="comments">
+{%- for comment in postComments  -%}
+	<li class="comment" >
+		<header class="comment__header">
+			<span class="comment__author">{{ comment.author_name }}</span>
+			<time class="comment__date" datetime="{{ comment.date  }}"> · {{ comment.date }}</time>
+		</header>
+		<div class="comment__content">
+			{{ comment.content.rendered | safe }}
+			
+		</div>
+	</li>
+{%- endfor -%}
+</ul>
+
+  {% include "components/comment-form.njk" %}

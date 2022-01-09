@@ -1,0 +1,42 @@
+---
+pagination:
+  data: episodes.episodes
+  size: 1
+  alias: post
+permalink: "{{ post.slug }}.htm"
+layout: 'layouts/base.njk'
+---
+
+{% set id = post.id %}
+{% set title = post.title.rendered %}
+{% set commentStatus = post.comment_status %}
+
+<main>
+  <h1>{{ post.title.rendered | safe }}</h1>
+
+{% if post.customfields.youtube %}
+  <section class="videoplayer">
+
+    <lite-youtube videoid="{{ post.customfields.youtube }}" style="background-image: url('{{ post._embedded["wp:featuredmedia"][0].source_url }}');">
+    <button type="button" class="lty-playbtn">
+      <span class="lyt-visually-hidden">Play Video: {{ post.title.rendered | safe }}</span>
+    </button>
+
+    <link rel="stylesheet" href="/assets/css/lite-yt-embed.css" />
+    <script src="/assets/scripts/lite-yt-embed.js"></script>
+    
+  </lite-youtube>
+
+  </section>
+{% endif %}
+
+<section class="content">
+  {{ post.content.rendered | safe }}
+</section>
+
+<footer>
+  {% include "components/comments.njk" %}
+</footer>
+
+</main>
+

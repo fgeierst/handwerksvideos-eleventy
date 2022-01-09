@@ -1,0 +1,22 @@
+{
+  "name": "handwerksvideos",
+  "version": "1.0.0",
+  "scripts": {
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "npx eleventy",
+    "watch:parcel": "npx parcel ./_site/index.html --no-source-maps",
+    "build:parcel": "npx parcel build ./_site/index.html --no-source-maps",
+    "clean": "rimraf dist _site",
+    "build": "npm run clean && npm run build:eleventy && npm run build:parcel"
+  },
+  "author": "Florian Geierstanger",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy-cache-assets": "^2.1.0",
+    "@11ty/eleventy-img": "^0.7.8",
+    "@11ty/eleventy-navigation": "^0.1.6",
+    "node-fetch": "^2.6.1",
+    "parcel": "^2.0.0-beta.1",
+    "rimraf": "^3.0.2"
+  }
+}

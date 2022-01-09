@@ -1,0 +1,27 @@
+---
+pagination:
+  data: pages.pages
+  size: 1
+  alias: post
+  addAllPagesToCollections: true
+permalink: "{{ post.slug }}.htm"
+layout: 'layouts/base.njk'
+eleventyComputed:
+  eleventyNavigation:
+    key: '{{post.slug}}'
+    title: '{{post.title.rendered}}'
+---
+
+{% set id = post.id %}
+{% set title = post.title.rendered %}
+{% set commentStatus = post.comment_status %}
+
+<main>
+  <h1>{{ post.title.rendered | safe }}</h1>
+
+	{{ post.content.rendered | safe }}
+</main>
+
+<footer>
+  {% include "components/comments.njk" %}
+</footer>

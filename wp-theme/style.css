@@ -1,0 +1,323 @@
+/*
+Theme Name:     Handwerksvideos 
+Description:    Child theme for the p2 theme 
+Author:         Florian Geierstanger
+Author URI:     http: //florian.geierstanger.org
+Template:       p2
+Version:        1
+*/
+@import url('../p2/style.css');
+
+
+
+/* #html  ---------- */
+
+
+body {
+	font-family: "Times New Roman", Times, serif;
+	font-size:inherit;
+	background-color: #E1DBBD;
+}
+
+h1, h2, h3 {
+	font-family: "Times New Roman", Times, serif;
+	font-size:inherit;
+	font-weight:inherit;
+	color:inherit !important;
+}
+h3 { font-size:150% !important;}
+	h1 {
+		font-size:inherit;
+	}
+	h2 a { text-decoration:none !important;}
+	
+/* #wrapper  ---------- */
+
+#wrapper {
+	background:none;
+	border:none;
+	box-shadow:none;
+	
+}
+
+
+#header { min-height:inherit;}
+
+
+
+#header .sleeve {
+	background-color:inherit;
+	box-shadow:none;
+	padding:0 0 0 0.4em;
+	text-transform:uppercase;
+	
+}
+
+	#header small {
+		font-size:inherit;
+	}
+
+
+#footer {
+	margin-bottom: 8em;
+	background:none;
+	box-shadow:none;
+	border:none;
+}
+
+
+	/* .blog   ---------- */
+	
+	/*.blog #header .sleeve {
+		font-size: 150%;
+		background-color:#FFF;
+		text-transform:inherit;
+		padding:0 0 0 0;
+		margin-left:0.6em;
+		margin-top:3em;
+		margin-bottom:1em;
+		}
+
+	.blog #header .sleeve h1 { 
+		padding:0.1em 0.3em !important;
+		}
+	
+	.blog #main > h2 { 
+		display:none !important;
+		}
+	.blog #sidebar { margin-top:0;}	
+	.blog #main .postcontent h2 { background-color:#FFF; padding: 0.1em 0.3em !important;}
+		*/
+	.tags {display:none;}
+	.blog #main .postcontent h2 {padding:0; margin:0;}
+	h4 a {text-decoration:none !important;}
+	
+	.blog .postcontent {background-color:#FFF;
+		padding:0.2em 0.3em 2em 0.3em;
+		border-radius:6px; }
+		.blog .postcontent img { max-width:100% !important;}
+	.blog #postlist {background-color:inherit;}
+	.navigation { border:none;}
+	
+	
+	.hentry {margin-bottom:3em;}
+	.controls { display:none;}																			
+
+	/* #admintool   ---------- */
+		.admintool {
+			position:absolute;
+			top:0.5em;
+			right:1em;
+			filter:alpha(opacity=0);
+			opacity:.0;
+			z-index:500;
+		}
+		.admintool:hover {
+			filter:alpha(opacity=100);
+			opacity:1.0;
+		}
+		.admintool a {
+			color:#FFF;
+			font-weight:bold;
+			text-decoration:none;
+		}
+		#post-prompt, .post-avatar {
+			display:none !important;
+		}
+
+
+/* #main  ---------- */
+
+.postcontent {
+		padding:0.1em 0.3em 2em 0.3em !important;
+		 }
+.postcontent img { max-width:100% !important;}
+#main {
+	background-color:inherit;
+}
+
+#postlist { /*background-color:#FFF;*/}
+.postcontent { background-color:#FFF;
+	margin-bottom:2em;
+	padding-bottom:2em;}
+
+#main ul#postlist li { padding:0;}
+
+#main h2 {
+	color:#000;
+}
+
+#main h2, .sticky h2 {
+	font-size:150% !important;
+	margin-bottom:1em;
+	background-color:#FFF;
+	display:inline-block;
+	padding:0.1em 0.3em;
+	margin:0 0 1em 0;
+}
+
+#main p, #main ul, #main ol, #main, .postcontent h1, .postcontent h2, .postcontent h3, .postcontent h4, #main h4 a, #footer p, #main .postcontent h2 {
+	font-size:inherit;
+	font-weight:inherit;
+}
+
+#main p img {
+	padding:inherit;
+	border:none;
+	max-width:inherit;
+}
+
+#main #postlist .commentlist li.bypostauthor {border-top-color:#000 !important;
+	border:none;}
+
+
+#main h4, #main .inlinecomments h4 {
+	margin-left:0;
+}
+
+
+
+
+.actions:first-child { display:none;}
+
+#postbox {
+	display:none;
+}
+
+#main a {
+	color:inherit;
+	text-decoration:underline;
+}	
+
+#main a:hover { 
+	border:none;
+	}
+
+#main ul#postlist li {
+	border:none;
+}
+
+
+
+
+	/* sticky  ---------- */
+
+	.sticky h2 a {
+		text-decoration:none !important;
+	}
+	.sticky h4 {
+		display:none;
+	}
+	.sticky {
+		background-color:inherit;
+		box-shadow:none;
+		border:none !important;
+		padding:inherit !important;
+	}
+
+.postcontent, #main p, #main ul, #mail ol { color:inherit;}
+
+.postcontent, #postbox .inputarea {
+	padding-left: inherit;
+}
+
+
+	/* comments   ---------- */
+	
+	#commentform p {
+		font-size:11px;
+	}
+	.meta {
+		/*font-family:Arial, Helvetica, sans-serif;*/
+		font-size:inherit !important;
+	}
+	a.thepermalink { display:none;}
+	#respond #cancel-comment-reply-link { /* font-family:inherit;*/}
+	.blog .kommentarhinweis, .page-id-83 .kommentarhinweis{display:none;}
+	.kommentarhinweis { background-color:#3478e3;
+	color:#FFF;
+	border-radius: 6px  ;
+	padding: 0.1em 0.3em;
+	}
+	.kommentarhinweis h3 { color:inherit; background-color:inherit; font-size:130%;}
+	#main #respond {
+
+}
+	h3#reply-title { color:#3478e3; font-size:130%; font-weight:normal;}
+
+	
+		
+
+	/* filmdatensatz  ---------- */
+	
+	.filmdatensatz { 
+	/*border:3px solid #000;*/
+	color:#333;
+	
+	}
+		.filmdatensatz li { display:inline !important; }
+		.filmdatensatz ul, .filmdatensatz h6 { padding:0; margin:0 !important;} 
+		.filmdatensatz h6  { margin:0 0 0.5em 0 !important; font-size:inherit; font-family:inherit; text-transform:uppercase;}
+		.filmdatensatz strong { font-weight:normal; font-family:Arial, Helvetica, sans-serif; font-size: 60%; text-transform:uppercase;}
+
+
+
+
+/* #sidebar ---------- */
+
+	#sidebar {
+		margin-top:3em;
+	}
+
+	 #sidebar a {padding: 0.1em 0.3em; 
+	 display:inline-block;;}
+	
+	li.current_page_item a, #sidebar a:hover {
+		padding: 0.1em 0.3em;
+		color:#000 !important;
+		background-color:#FFF;
+
+		
+	}
+	
+	#sidebar h2 {
+	font-size:inherit;
+	}
+	
+	#sidebar a, #footer a {
+		color:inherit;
+	}
+
+	#sidebar ul, #sidebar ul li {
+		font-size:inherit;
+	}
+	
+	#nav_menu-2 h2.widgettitle { 
+		background-color:#FFF; 
+		padding: 0.1em 0.3em; 
+		color:#000;
+		}
+
+
+/*  mitmachen ---------- #D54E21 */
+
+
+
+/* .page-id-79 #main h2 { background-color:#D54E21 !important; color:#FFF !important;} */
+/* .menu-item-219 a { color:#D54E21 !important} */
+
+/*.mitmachen { width:200px; background-color:#D54E21 !important; color:#FFF !important; float:right; padding: 0.1em 0.3em; border-radius:6px; margin:0.3em;} */
+
+
+
+/*  .fm-form ----------  */
+
+
+form.fm-form * { font-family:"Times New Roman", Times, serif !important;}
+.fm-form h3 { font-weight: normal !important;}
+
+
+/*  ----------  */
+
+
+

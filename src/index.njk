@@ -1,0 +1,36 @@
+---
+eleventyNavigation:
+  key: index
+  title: 'Der Letzte seines Standes?'
+layout: 'layouts/base.njk'
+title: 'Der Letzte seines Standes?'
+---
+
+<h1>Der Letzte seines Standes?</h1>
+<p class="lead">Wer kennt sie noch, die alten Drechsler, Nagelschmiede, Brokatweber oder Kupferstecher? Die Filmreihe von Rüdiger Lorenz wirft einen lebendigen Blick auf Wurzeln unserer Kultur.</p>
+<p></p>
+
+<ul class="episodes">
+
+		{% for episode in episodes.episodes %}
+				<li class="episode {% if episode._embedded['wp:featuredmedia'] %}hasimage{% endif %}">
+
+						{% if episode._embedded["wp:featuredmedia"] %}
+								{% image episode._embedded["wp:featuredmedia"][0].source_url, "" %}
+						{% else %}
+						{# {{ episode.excerpt.rendered | safe }}		 #}
+						{% endif %}
+
+						<div class="episode__content">
+							<a class="episode__link" href="{{episode.slug}}.htm">
+									<h2 class="episode__title">{{ episode.title.rendered | safe }}
+											{% if episode.customfields.youtube %} ▶{% endif %}
+									</h2>
+							</a>
+						</div>
+
+				</li>
+		{% endfor %}
+
+</ul>
+

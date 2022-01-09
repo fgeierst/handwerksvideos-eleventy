@@ -1,0 +1,241 @@
+/* ---- variables */
+
+:root {
+	--color-text: #131313;
+	--color-background: #fff;
+	--color-shaded: #252525;
+	--font-family: Times New Roman, serif;
+	--font-family-strong: 'Inter', sans-serif;
+	--border: 1px solid lightgrey;
+	--border-radius: .25em;
+}
+
+/* ---- typography */
+
+body {
+	font-family: var(--font-family);
+	font-size: clamp(1rem, 0.5rem + 1vw, 1.25rem);
+	line-height: 1.3;
+	color: var(--color-text);
+	background-color: var(--color-background);
+}
+
+h1 {
+	font-family: var(--font-family-strong);
+	font-weight: 900;
+}
+
+h2,
+h3,
+h4 {
+	font-family: var(--font-family-strong);
+	font-weight: 700;
+}
+
+.h2 {
+	text-decoration: none;
+}
+
+.h2 h2 {
+	margin: 0;
+}
+
+strong {
+	font-family: var(--font-family-strong);
+}
+
+p,
+li {
+	max-width: 65ch;
+}
+
+@media (min-width: 700px) {
+	.lead {
+		font-size: 120%;
+	}
+}
+
+
+a {
+	color: unset;
+}
+
+
+/* ---- reset gutenberg block styles */
+
+figure {
+	margin: 0;
+}
+
+.is-type-video,
+.slideshow-wrapper {
+	display: none;
+}
+
+
+/* ---- component: nav, scope: all pages */
+
+.nav {
+	list-style: none;
+	padding-left: 0;
+	display: flex;
+	flex-wrap: wrap;
+	font-family: var(--font-family-strong);
+}
+
+.nav__item:not(:first-child) {
+	margin: 0 .5em;
+}
+
+.nav__item--current {
+	text-decoration: underline;
+}
+
+.nav__item a {
+	text-decoration: none;
+}
+
+
+/* ---- component: comments,  scope: all pages */
+
+.comments {
+	list-style: none;
+	padding: 0;
+	max-width: 65ch;
+}
+
+.comment {
+	margin-bottom: 1.2em;
+	padding: .2em;
+}
+
+.comment__header {
+	margin: .25em 0;
+	font-family: var(--font-family-strong);
+}
+
+.comment__author {
+	font-weight: bold;
+}
+
+.comment__date {
+	color: grey;
+	font-size: 90%;
+}
+
+.comment__content p {
+	display: inline;
+}
+.comment__content br { 
+	/* display: inline;
+	content: ' '; */
+	display:none;
+}
+
+/* ---- component: episode cards, scope: frontpage */
+
+.episodes {
+	list-style: none;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(11em, 1fr));
+	gap: .25em;
+}
+
+.episode {
+	border: var(--border);
+	border-radius: var(--border-radius);
+	display: grid;
+	aspect-ratio: 9/13;
+	overflow: hidden;
+	/* border: 3px solid transparent ; */
+}
+
+.episode > * {
+	grid-column: 1 / -1;
+	grid-row: 1 / -1;
+}
+
+.episode img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+	transition: all .2s;
+}
+.episode:hover img {
+	transform: scale(1.07);
+}
+.episode:hover  {
+	/* border: 3px solid grey ; */
+}
+
+.episode__content {
+	padding: .5em;
+	display: grid;
+	align-items: flex-end;
+	background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 22%, rgba(0,0,0,0) 50%);
+	z-index: 1;
+}
+
+.episode__title {
+	margin: 0;
+	/* overflow-wrap: break-word;
+	word-break: break-word;
+	hyphens: auto; */
+}
+
+.episode.hasimage .episode__link {
+	text-decoration: none;
+	color: white;
+}
+
+/* ---- component: videoplayer, scope: episode pages */
+
+body {
+	height: auto;
+}
+
+.videoplayer {
+	background-color: var(--color-shaded);
+	display:flex;
+	justify-content: center;
+}
+
+/* @media (orientation: portrait), (min-width: 1000px) {
+	.videoplayer {
+		position: sticky;
+		top: 0;
+	}
+} */
+
+.videoplayer lite-youtube {
+	width: 100vw;
+}
+
+.has-video *:is(.nav, h1){
+	/* background-color: var(--color-shaded);
+	color: rgb(231, 225, 218) */
+}
+
+/* ---- component: footer, scope: all pages */
+
+.footer {
+	font-family: var(--font-family-strong);
+}
+
+
+/* ---- component: comment form, scope: all pages */
+
+.comment__form, .comment__form *:is(input,textarea) {
+	font-family: var(--font-family-strong);
+	font-size: unset;
+}
+
+ .comment__form *:is(input,textarea) {
+	border: var(--border);
+	border-radius: var(--border-radius);
+}
+
+.is-hidden {
+	display: none;
+}
