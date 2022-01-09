@@ -11,4 +11,3 @@
 - https://github.com/JamieBradders/11wp (WP, GraphQL, 11ty)
 - https://github.com/samikeijonen/11ty-wp (WP, REST, 11ty, full fetch)
 - https://github.com/jhackett1/wp-11ty (WP, REST, 11ty, minimal)
-- 
